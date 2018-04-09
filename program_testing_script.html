@@ -3,28 +3,37 @@
   <body>
   <code>
 
-  #!/bin/sh
-  
-  
-  # now run multiple times, each with a different file for input!!!!
-  echo "--------------"
-  echo "        test 1"
-  perl -W main.perl < ina.txt
-  
-  echo "--------------"
-  echo "        test 2"
-  perl -W main.perl < inb.txt
-  
-  echo "--------------"
-  echo "        test 3"
-  perl -W main.perl < inc.txt
-  
-  #echo "test 4\n"
-  #echo "test 5\n"
-  #echo "test 6\n"
-  #echo "test 7\n"
-  #echo "test 8\n"
-  
+    #----------------------------------------------------------------------
+    #! /bin/sh
+    # 
+    # use strict
+
+
+    chmod a+x main.perl
+
+    # now run multiple times, each with a different file for input!!!!
+    echo "--------------"
+    echo "        test 1"
+    perl -Mdiagnostics main.perl < ina.txt
+
+    echo "--------------"
+    echo "        test 2"
+    perl -Mdiagnostics main.perl < inb.txt
+
+    echo "--------------"
+    echo "        test 3"
+    perl -Mdiagnostics main.perl < inc.txt
+
+    #echo "test 4\n"
+    #./main < ind.txt
+
+
+    #echo "test 5\n"
+    #echo "test 6\n"
+    #echo "test 7\n"
+    #echo "test 8\n"
+
+
 
   </code>
 
